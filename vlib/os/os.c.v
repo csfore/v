@@ -1106,3 +1106,42 @@ pub fn last_error() IError {
 		return error_with_code(msg, code)
 	}
 }
+
+pub struct Stat {
+pub:
+	dev     u64
+	ino     u64
+	nlink   u64
+	mode    u32
+	uid     u32
+	gid     u32
+	rdev    u64
+	size    u64
+	blksize u64
+	blocks  u64
+	atime   i64
+	mtime   i64
+	ctime   i64
+}
+
+// stat - returns struct with the full file data from C.stat
+// The file mode is provided in octet form, following the format for `man 7 inode` 
+pub fn stat(path string) !&Stat {
+	attr := C.stat{}
+	unsafe { C.stat(&char(path.str), &attr) }
+	return &Stat{
+		dev:     u64(attr.st_dev)
+		ino:     u64(attr.st_ino)
+		nlink:   u64(attr.st_nlink)
+		mode:    '${attr.st_mode:o}'.u32() // Done to convert the decimal output to raw octal
+		uid:     u32(attr.st_uid)
+		gid:     u32(attr.st_gid)
+		rdev:    u64(attr.st_rdev)
+		size:    u64(attr.st_size)
+		blksize: u64(attr.st_blksize)
+		blocks:  u64(attr.st_blocks)
+		atime:   i64(attr.st_atime)
+		mtime:   i64(attr.st_mtime)
+		ctime:   i64(attr.st_ctime)
+	}
+}
