@@ -26,6 +26,13 @@ pub const (
 pub type HANDLE = voidptr
 pub type HMODULE = voidptr
 
+pub struct Stat {
+pub:
+	size  u64
+	mode  u32
+	mtime int
+}
+
 // win: FILETIME
 // https://docs.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-filetime
 struct Filetime {

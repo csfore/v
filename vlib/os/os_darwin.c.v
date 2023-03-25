@@ -12,3 +12,10 @@ pub const (
 	sys_open_nocancel = 398
 	sys_stat64        = 338
 )
+
+pub struct Stat {
+pub:
+	size  u64
+	mode  u32
+	mtime int
+}

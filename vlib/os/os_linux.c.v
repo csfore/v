@@ -17,3 +17,20 @@ pub const (
 	sys_mkdir = 83
 	sys_creat = 85
 )
+
+pub struct Stat {
+pub:
+	dev     u64
+	ino     u64
+	nlink   u64
+	mode    u32
+	uid     u32
+	gid     u32
+	rdev    u64
+	size    u64
+	blksize u64
+	blocks  u64
+	atime   i64
+	mtime   i64
+	ctime   i64
+}
