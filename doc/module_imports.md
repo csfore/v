@@ -95,5 +95,8 @@ fn main() {
 	println('Century: ${my_time.century()}')
 }
 ```
+
+<p>
 <a align="left" href="docs.md">&larr; Table of Contents</a>
 <a align="right" href="statements.md">Statements and Expressions &rarr; </a>
+</p>
