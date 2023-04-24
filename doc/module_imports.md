@@ -96,7 +96,9 @@ fn main() {
 }
 ```
 
-<p>
-<a align="left" href="docs.md">&larr; Table of Contents</a>
-<a align="right" href="statements.md">Statements and Expressions &rarr; </a>
+<p align="left">
+<a href="docs.md">&larr; Table of Contents</a>
+</p>
+<p align="right">
+<a href="statements.md">Statements and Expressions &rarr; </a>
 </p>
