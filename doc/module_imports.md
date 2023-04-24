@@ -99,5 +99,5 @@ fn main() {
 <p align="center">
 <a href="docs.md">&larr; Table of Contents</a>
  | 
-<a href="statements.md">Statements and Expressions &rarr; </a>
+<a href="statements.md">Statements & Expressions &rarr;</a>
 </p>
