@@ -589,3 +589,9 @@ my_label:
 `goto` should be avoided, particularly when `for` can be used instead.
 [Labelled break/continue](#labelled-break--continue) can be used to break out of
 a nested loop, and those do not risk violating memory-safety.
+
+<p align="center">
+<a href="module_imports.md">&larr; Module Imports</a>
+ | 
+<a href="structs.md">Structures &rarr;</a>
+</p>
