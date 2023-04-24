@@ -1412,7 +1412,7 @@ and
 [maps](https://modules.vlang.io/maps.html).
 
 <p>
-<a alight="left" href="appendices.md">&larr; Appendices</a>
+<a align="left" href="appendices.md">&larr; Appendices</a>
 
-<a alight="right" href="module_imports.md">Module Imports &rarr;</a>
+<a align="right" href="module_imports.md">Module Imports &rarr;</a>
 </p>
