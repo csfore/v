@@ -1411,8 +1411,8 @@ See all methods of
 and
 [maps](https://modules.vlang.io/maps.html).
 
-<p>
-<a align="left" href="appendices.md">&larr; Appendices</a>
-
-<a align="right" href="module_imports.md">Module Imports &rarr;</a>
+<p align="center">
+<a href="appendices.md">&larr; Appendices</a>
+ | 
+<a href="module_imports.md">Module Imports &rarr;</a>
 </p>
