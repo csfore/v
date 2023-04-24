@@ -1412,7 +1412,7 @@ and
 [maps](https://modules.vlang.io/maps.html).
 
 <p align="right">
-&rarr; [Module Imports](module_imports.md)
+<a href="module_imports.md">Module Imports &rarr; </a>
 </p>
 
 ### Selective imports
