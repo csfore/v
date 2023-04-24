@@ -1412,5 +1412,8 @@ and
 [maps](https://modules.vlang.io/maps.html).
 
 
-| :[Appendices](appendices.md) | [Module Imports](module_imports.md): |
+<p>
+<a align="left" href="appendices.md">&larr; Appendices</a>
 
+<a align="right" href="module_imports.md">Module Imports &rarr;</a>
+</p>
