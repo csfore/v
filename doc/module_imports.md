@@ -25,4 +25,75 @@ which module is being called. This is especially useful in large code bases.
 
 Cyclic module imports are not allowed, like in Go.
 
-&larr; [Table of Contents](docs.md)
+## Selective imports
+
+You can also import specific functions and types from modules directly:
+
+```v
+import os { input }
+
+fn main() {
+	// read text from stdin
+	name := input('Enter your name: ')
+	println('Hello, ${name}!')
+}
+```
+
+> **Note**
+> This will import the module as well. Also, this is not allowed for
+> constants - they must always be prefixed.
+
+You can import several specific symbols at once:
+
+```v
+import os { input, user_os }
+
+name := input('Enter your name: ')
+println('Name: ${name}')
+current_os := user_os()
+println('Your OS is ${current_os}.')
+```
+
+## Module import aliasing
+
+Any imported module name can be aliased using the `as` keyword:
+
+> **Note**
+> This example will not compile unless you have created `mymod/sha256.v`
+
+```v failcompile
+import crypto.sha256
+import mymod.sha256 as mysha256
+
+fn main() {
+	v_hash := sha256.sum('hi'.bytes()).hex()
+	my_hash := mysha256.sum('hi'.bytes()).hex()
+	assert my_hash == v_hash
+}
+```
+
+You cannot alias an imported function or type.
+However, you _can_ redeclare a type.
+
+```v
+import time
+import math
+
+type MyTime = time.Time
+
+fn (mut t MyTime) century() int {
+	return int(1.0 + math.trunc(f64(t.year) * 0.009999794661191))
+}
+
+fn main() {
+	mut my_time := MyTime{
+		year: 2020
+		month: 12
+		day: 25
+	}
+	println(time.new_time(my_time).utc_string())
+	println('Century: ${my_time.century()}')
+}
+```
+<a align="left" href="docs.md">&larr; Table of Contents</a>
+<a align="right" href="statements.md">Statements and Expressions &rarr; </a>
