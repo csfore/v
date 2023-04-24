@@ -1411,9 +1411,9 @@ See all methods of
 and
 [maps](https://modules.vlang.io/maps.html).
 
-<div align="right">
+<p align="right">
 &rarr; [Module Imports](module_imports.md)
-</div>
+</p>
 
 ### Selective imports
 
