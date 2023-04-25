@@ -32,7 +32,7 @@ Autofree can be enabled with an `-autofree` flag.
 
 For developers willing to have more low level control, autofree can be disabled with
 `-manualfree`, or by adding a `[manualfree]` on each function that wants manage its
-memory manually. (See [attributes](#attributes)).
+memory manually. (See [attributes](advanced.md#attributes)).
 
 > **Note**
 > Autofree is still WIP. Until it stabilises and becomes the default, please
@@ -225,7 +225,7 @@ the compiler would complain about the assignment in `f()` because `s` *"might
 refer to an object stored on stack"*. The assumption made in `g()` that the call
 `r.f(&s)` would only borrow the reference to `s` is wrong.
 
-A solution to this dilemma is the `[heap]` [attribute](#attributes) at the declaration of
+A solution to this dilemma is the `[heap]` [attribute](advanced.md#attributes) at the declaration of
 `struct MyStruct`. It instructs the compiler to *always* allocate `MyStruct`-objects
 on the heap. This way the reference to `s` remains valid even after `g()` returns.
 The compiler takes into consideration that `MyStruct` objects are always heap

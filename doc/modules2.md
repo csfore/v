@@ -3,7 +3,7 @@
 Every file in the root of a folder is part of the same module.
 Simple programs don't need to specify module name, in which case it defaults to 'main'.
 
-See [symbol visibility](#symbol-visibility), [Access modifiers](#access-modifiers).
+See [symbol visibility](docs.md#symbol-visibility), [Access modifiers](structs.md#access-modifiers).
 
 ### Create modules
 

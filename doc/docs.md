@@ -240,7 +240,7 @@ In this case `main` doesn't return anything, so there is no return type.
 
 As in many other languages (such as C, Go, and Rust), `main` is the entry point of your program.
 
-[`println`](#println) is one of the few [built-in functions](#builtin-functions).
+[`println`](builtin.md#println) is one of the few [built-in functions](builtin.md#builtin-functions).
 It prints the value passed to it to standard output.
 
 `fn main()` declaration can be skipped in one file programs.
@@ -360,12 +360,12 @@ fn private_function() {
 ```
 
 Functions are private (not exported) by default.
-To allow other [modules](#module-imports) to use them, prepend `pub`. The same applies
-to [structs](#structs), [constants](#constants) and [types](#type-declarations).
+To allow other [modules](module_imports.md#module-imports) to use them, prepend `pub`. The same applies
+to [structs](structs.md#structs), [constants](constants.md#constants) and [types](types.md#type-declarations).
 
 > **Note**
 > `pub` can only be used from a named module.
-> For information about creating a module, see [Modules](#modules).
+> For information about creating a module, see [Modules](modules2.md#modules).
 
 ## Variables
 
@@ -388,7 +388,7 @@ the expression `T(v)` converts the value `v` to the
 type `T`.
 
 Unlike most other languages, V only allows defining variables in functions.
-By default V does not allow **global variables**. See more [details](#global-variables).
+By default V does not allow **global variables**. See more [details](advanced.md#global-variables).
 
 For consistency across different code bases, all variable and function names
 must use the `snake_case` style, as opposed to type names, which must use `PascalCase`.
@@ -868,7 +868,7 @@ names << 'Sam'
 // names << 10  <-- This will not compile. `names` is an array of strings.
 ```
 
-`val in array` returns true if the array contains `val`. See [`in` operator](#in-operator).
+`val in array` returns true if the array contains `val`. See [`in` operator](statements.md#in-operator).
 
 ```v
 names := ['John', 'Peter', 'Sam']
@@ -894,7 +894,7 @@ println(nums.len) // "0"
 ```
 
 `data` is a field (of type `voidptr`) with the address of the first
-element. This is for low-level [`unsafe`](#memory-unsafe-code) code.
+element. This is for low-level [`unsafe`](advanced.md#memory-unsafe-code) code.
 
 > **Note**
 > Fields are read-only and can't be modified by the user.
@@ -944,7 +944,7 @@ for i in 0 .. 1000 {
 ```
 
 > **Note**
-> The above code uses a [range `for`](#range-for) statement.
+> The above code uses a [range `for`](statements.md#range-for) statement.
 
 You can initialize the array by accessing the `index` variable which gives
 the index as shown here:
@@ -983,7 +983,7 @@ An array can be of these types:
 
 **Example Code:**
 
-This example uses [Structs](#structs) and [Sum Types](#sum-types) to create an array
+This example uses [Structs](structs.md#structs) and [Sum Types](types.md#sum-types) to create an array
 which can handle different types (e.g. Points, Lines) of data elements.
 
 ```v

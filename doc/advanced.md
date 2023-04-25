@@ -1217,7 +1217,7 @@ struct C.SomeCStruct {
 The existence of the data members is made known to V, and they may be used without
 re-creating the original structure exactly.
 
-Alternatively, you may [embed](#embedded-structs) the sub-data-structures to maintain
+Alternatively, you may [embed](structs.md#embedded-structs) the sub-data-structures to maintain
 a parallel code structure.
 
 ### Export to shared library

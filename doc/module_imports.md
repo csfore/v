@@ -1,6 +1,6 @@
 # Module Imports
 
-For information about creating a module, see [Modules](#modules).
+For information about creating a module, see [Modules](modules2.md#modules).
 
 Modules can be imported using the `import` keyword:
 

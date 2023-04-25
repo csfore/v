@@ -19,7 +19,7 @@ assert p.x == 10
 ### Heap structs
 
 Structs are allocated on the stack. To allocate a struct on the heap
-and get a [reference](#references) to it, use the `&` prefix:
+and get a [reference](references.md#references) to it, use the `&` prefix:
 
 ```v
 struct Point {
@@ -32,7 +32,7 @@ p := &Point{10, 10}
 println(p.x)
 ```
 
-The type of `p` is `&Point`. It's a [reference](#references) to `Point`.
+The type of `p` is `&Point`. It's a [reference](references.md#references) to `Point`.
 References are similar to Go pointers and C++ references.
 
 ```v
@@ -60,7 +60,7 @@ println(fc) // Foo{ x: 2 }
 println(c) // &Foo{ x: 2 } // Note `&` prefixed.
 ```
 
-see also [Stack and Heap](#stack-and-heap)
+see also [Stack and Heap](men_manage.md#stack-and-heap)
 
 ### Default field values
 
@@ -75,7 +75,7 @@ struct Foo {
 
 All struct fields are zeroed by default during the creation of the struct.
 Array and map fields are allocated.
-In case of reference value, see [here](#structs-with-reference-fields).
+In case of reference value, see [here](advanced.md#structs-with-reference-fields).
 
 It's also possible to define custom default values.
 
@@ -87,7 +87,7 @@ struct Foo {
 }
 ```
 
-You can mark a struct field with the `[required]` [attribute](#attributes), to tell V that
+You can mark a struct field with the `[required]` [attribute](advanced.md#attributes), to tell V that
 that field must be initialized when creating an instance of that struct.
 
 This example will not compile, since the field `n` isn't explicitly initialized:
@@ -220,7 +220,7 @@ __global:
 }
 ```
 
-Private fields are available only inside the same [module](#modules), any attempt
+Private fields are available only inside the same [module](modules2.md#modules), any attempt
 to directly access them from another module will cause an error during compilation.
 Public immutable fields are readonly everywhere.
 

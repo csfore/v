@@ -172,7 +172,7 @@ A channel can be closed to indicate that no further objects can be pushed. Any a
 to do so will then result in a runtime panic (with the exception of `select` and
 `try_push()` - see below). Attempts to pop will return immediately if the
 associated channel has been closed and the buffer is empty. This situation can be
-handled using an `or {}` block (see [Handling options/results](#handling-optionsresults)).
+handled using an `or {}` block (see [Handling options/results](types.md#handling-optionsresults)).
 
 ```v wip
 ch := chan int{}
@@ -192,7 +192,7 @@ y := <-ch2 ?
 
 The `select` command allows monitoring several channels at the same time
 without noticeable CPU load. It consists of a list of possible transfers and associated branches
-of statements - similar to the [match](#match) command:
+of statements - similar to the [match](statements.md#match) command:
 
 ```v
 import time
